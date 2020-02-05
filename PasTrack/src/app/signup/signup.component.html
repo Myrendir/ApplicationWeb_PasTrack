@@ -1,1 +1,15 @@
-<p>signup works!</p>
+<div class="container">
+  <form class="text-center" [formGroup]="register">
+    <label for="email"></label>
+    <input name="email" id="email" formControlName="email" class="form-control mb-4"
+           placeholder="Email">
+    <label for="password"></label>
+    <input name="password" id="password" formControlName="password"
+           type="password" class="form-control mb-4" placeholder="Mot de passe">
+    <label for="role"></label>
+    <input type="text" name="role" id="role" formControlName="role" class="form-control mb-4" placeholder="Role">
+    <button type="submit" name="submit" class="btn btn-info btn-block"
+            (click)="signup()">Inscription
+    </button>
+  </form>
+</div>

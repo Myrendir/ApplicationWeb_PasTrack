@@ -50,4 +50,8 @@ export class AuthService {
     sessionStorage.removeItem('email');
     sessionStorage.removeItem('token');
   }
+
+  register(identifiant: User) {
+    return this.http.post<User>(apiUrl + '/signup', identifiant);
+  }
 }
