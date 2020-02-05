@@ -33,6 +33,7 @@ export class AuthService {
       .pipe(map(
         userData => {
           sessionStorage.setItem('email', identifiant.email);
+          sessionStorage.setItem('role', identifiant.role);
           const tokenStr = 'Bearer ' + userData.token;
           sessionStorage.setItem('token', tokenStr);
           return userData;
@@ -48,6 +49,7 @@ export class AuthService {
 
   logout() {
     sessionStorage.removeItem('email');
+    sessionStorage.removeItem('role');
     sessionStorage.removeItem('token');
   }
 
