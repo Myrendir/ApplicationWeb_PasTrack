@@ -2,14 +2,21 @@
   <form id="login" class="text-center border border-light p-5" [formGroup]="form">
     <label for="email"></label>
     <input name="email" id="email" formControlName="email" class="form-control mb-4"
-           placeholder="Email">
+           placeholder="Email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+      <div *ngIf="f.email.errors.required">Email is required</div>
+    </div>
     <label for="password"></label>
     <input name="password" id="password" formControlName="password"
-           type="password" class="form-control mb-4" placeholder="Mot de passe">
+           type="password" class="form-control mb-4" placeholder="Mot de passe"
+           [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+      <div *ngIf="f.password.errors.required">Password is required</div>
+    </div>
     <div class="g-recaptcha" data-sitekey="6LcAsLoUAAAAALuWbgtdco4bgMi5qWXTqJokXRqU"></div>
     <div class="form-buttons">
-      <button type="submit" name="submit" class="btn btn-info btn-block"
-              (click)="login()">Login
+      <button [disabled]="loading" type="submit" name="submit" class="btn btn-primary btn-block"
+              (click)="login()"><span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Connexion
       </button>
     </div>
   </form>

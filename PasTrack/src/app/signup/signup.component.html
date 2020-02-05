@@ -2,14 +2,25 @@
   <form class="text-center" [formGroup]="register">
     <label for="email"></label>
     <input name="email" id="email" formControlName="email" class="form-control mb-4"
-           placeholder="Email">
+           placeholder="Email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+      <div *ngIf="f.email.errors.required">Email is required</div>
+    </div>
     <label for="password"></label>
     <input name="password" id="password" formControlName="password"
-           type="password" class="form-control mb-4" placeholder="Mot de passe">
+           type="password" class="form-control mb-4" placeholder="Mot de passe"
+           [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+      <div *ngIf="f.password.errors.required">Password is required</div>
+    </div>
     <label for="role"></label>
-    <input type="text" name="role" id="role" formControlName="role" class="form-control mb-4" placeholder="Role">
-    <button type="submit" name="submit" class="btn btn-info btn-block"
-            (click)="signup()">Inscription
+    <input type="text" name="role" id="role" formControlName="role" class="form-control mb-4" placeholder="Role"
+           [ngClass]="{ 'is-invalid': submitted && f.role.errors}">
+    <div *ngIf="submitted && f.role.errors" class="invalid-feedback">
+      <div *ngIf="f.role.errors.required">Role is required.</div>
+    </div>
+    <button [disabled]="loading" type="submit" name="submit" class="btn btn-primary btn-block"
+            (click)="signup()"><span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Inscription
     </button>
   </form>
 </div>
