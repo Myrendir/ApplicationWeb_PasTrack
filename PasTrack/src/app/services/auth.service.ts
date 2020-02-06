@@ -3,6 +3,9 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 import {User} from '../models';
 import {map, tap} from 'rxjs/operators';
+import * as jwt_decode from 'jwt-decode';
+import {stringify} from "querystring";
+import {arrayify} from "tslint/lib/utils";
 
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
@@ -33,8 +36,9 @@ export class AuthService {
       .pipe(map(
         userData => {
           sessionStorage.setItem('email', identifiant.email);
-          sessionStorage.setItem('role', identifiant.role);
           const tokenStr = 'Bearer ' + userData.token;
+          const decode = jwt_decode(tokenStr);
+          sessionStorage.setItem('role', decode.role);
           sessionStorage.setItem('token', tokenStr);
           return userData;
         }
