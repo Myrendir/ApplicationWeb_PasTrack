@@ -1,0 +1,81 @@
+@import "src/app/app.component";
+
+.header {
+  height: 95vh;
+  width: 100%;
+  position: relative;
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__logo {
+    height: 5rem;
+
+    @include fadeIn(.75s);
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    .btn {
+      margin-top: 2rem;
+      padding-bottom: 5px;
+      display: inline-block;
+      position: relative;
+
+      &:after {
+        bottom: 0;
+        content: "";
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        background: #000;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+
+      &:hover:after {
+        width: 100%;
+        left: 0;
+      }
+    }
+
+  }
+
+  &__smartphone {
+    width: 100%;
+    max-width: 1100px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: crimson;
+
+    &__size {
+      width: 33%;
+      float: left;
+
+      @include clearfix;
+
+      &--1 {
+        @include fadeIn(0s);  //_mixins fade_in animation fadeIn($delay)
+      }
+
+      &--2 {
+        @include fadeIn(.25s);
+      }
+
+      &--3 {
+        @include fadeIn(.50s);
+      }
+    }
+  }
+}

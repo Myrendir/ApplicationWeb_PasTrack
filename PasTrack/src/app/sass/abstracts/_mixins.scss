@@ -1,0 +1,19 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin fadeIn($delay) {
+  animation: fadeIn 1s ease-out $delay;
+  animation-fill-mode: backwards;
+}

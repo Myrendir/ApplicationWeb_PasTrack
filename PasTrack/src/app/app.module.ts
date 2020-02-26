@@ -8,6 +8,7 @@ import {SignupComponent} from './signup/signup.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
+import { BodyComponent } from './body/body.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HomeComponent } from './home/home.component';
     LoginComponent,
     SignupComponent,
     HomeComponent,
+    BodyComponent,
   ],
   imports: [
     BrowserModule,
