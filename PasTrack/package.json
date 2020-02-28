@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "angular-bootstrap-md": "^8.9.0",
+    "bootstrap": "^4.4.1",
     "chart.js": "^2.9.3",
     "jquery": "^3.4.1",
     "jwt-decode": "^2.2.0",

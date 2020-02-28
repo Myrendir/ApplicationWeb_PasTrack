@@ -1,7 +1,9 @@
 .informations {
-  height: 100vh;
+  height: 110vh;
   position: relative;
   padding: 15rem 0;
+
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
 
   .bg-video {
     position: absolute;
@@ -10,7 +12,7 @@
     height: 100%;
     width: 100%;
     z-index: -1;
-    opacity: .15;
+    opacity: .25;
     overflow: hidden;
 
     &__content {
@@ -20,4 +22,37 @@
     }
   }
 
+  &__graph {
+    width: 50%;
+    height: 100%;
+
+    position: relative;
+    float: right;
+
+    .display {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__text-box {
+    width: 50%;
+    height: 100%;
+
+    float: left;
+    position: relative;
+
+    &--section {
+      width: 100%;
+      padding: 50px;
+
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 }

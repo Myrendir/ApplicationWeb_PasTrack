@@ -8,13 +8,13 @@
 
   &__logo-box {
     position: absolute;
-    top: 4rem;
+    top: 8rem;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
   &__logo {
-    height: 5rem;
+    height: 10rem;
   }
 
   &__text-box {
@@ -29,6 +29,7 @@
       padding-bottom: 5px;
       display: inline-block;
       position: relative;
+      font-size: 2rem;
 
       &:after {
         bottom: 0;
@@ -52,6 +53,7 @@
   &__available {
     width: 25%;
     text-align: center;
+    font-size: 2rem;
 
     position: absolute;
     top: 70%;

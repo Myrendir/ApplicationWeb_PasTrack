@@ -3,13 +3,29 @@ body {
   font-weight: 400;
   /*font-size: 16px;*/
   line-height: 1.7;
-  color: $color-grey-dark;
-  padding: 3rem;
   box-sizing: border-box;
 }
 
 .heading-primary {
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+
+.heading-secondary {
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+
+.typography-text {
+  font-size: 1.5rem;
+  text-align: justify;
+  line-height: 3rem;
+}
+
+.google,
+.apple {
+  font-weight: 700;
+  text-transform: uppercase;
 }

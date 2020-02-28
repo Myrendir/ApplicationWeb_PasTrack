@@ -12,17 +12,34 @@
     <title>PasTrack | App for your health</title>
     <base href="/">
 
-    <link rel="icon" type="image/x-icon" href="PasTrack/src/assets/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../../assets/img/logo-pastrack.svg">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.2.2/web-animations.min.js"></script>
 
     <script src="node_modules/chart.js/src/chart.js"></script>
-</head>
 
+    <script src="node_modules/chart.js/dist/Chart.js"></script>
+    <script>
+        var myChart = new Chart(ctx, {...});
+    </script>
+</head>
 <body>
-<app-root></app-root>
+<app-root>
+    <div class="loading">
+        <div class="dots-container">
+            <div class="dots"></div>
+            <div class="dots"></div>
+            <div class="dots"></div>
+            <div class="dots"></div>
+            <div class="dots"></div>
+        </div>
+    </div>
+</app-root>
+
+<img src="../../assets/img/step.gif" alt="step">
+
 </body>
 
 </html>

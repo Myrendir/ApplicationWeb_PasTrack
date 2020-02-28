@@ -12,6 +12,9 @@ import { InformationsComponent } from './informations/informations.component';
 // /animations';
 import { NgwWowModule } from 'ngx-wow';
 import { AppComponent } from './app.component';
+import { ChartsModule } from 'ng2-charts';
+import {RouterModule} from "@angular/router";
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +24,16 @@ import { AppComponent } from './app.component';
     HomeComponent,
     BodyComponent,
     InformationsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgwWowModule
+    NgwWowModule,
+    BrowserModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
