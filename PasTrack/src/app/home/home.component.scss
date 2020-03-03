@@ -81,4 +81,11 @@
   .step--gif {
     transform: rotate(45deg);
   }
+
+  &__arrow {
+    position: fixed;
+    bottom: 10px;
+    right: 5%;
+    width: 40px;
+  }
 }

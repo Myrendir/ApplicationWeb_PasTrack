@@ -12,6 +12,7 @@ import { InformationsComponent } from './informations/informations.component';
 import { NgwWowModule } from 'ngx-wow';
 import { AppComponent } from './app.component';
 import { ChartsModule } from 'ng2-charts';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ChartsModule } from 'ng2-charts';
     HomeComponent,
     BodyComponent,
     InformationsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
