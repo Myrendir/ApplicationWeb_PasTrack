@@ -9,10 +9,10 @@ export class InformationsComponent implements OnInit {
 
   constructor() { }
 
-  public radarChartLabels = ['Q1', 'Q2', 'Q3', 'Q4'];
+  public radarChartLabels = ['Nombre de pas', 'Distance parcourus', 'Calories perdues', 'Moyenne par jour'];
   public radarChartData = [
-    {data: [120, 130, 180, 70], label: '2017'},
-    {data: [90, 150, 200, 45], label: '2018'}
+    {data: [180, 130, 180, 110], label: '2019'},
+    {data: [150, 150, 200, 90], label: '2020'}
   ];
   public radarChartType = 'radar';
   ngOnInit() {

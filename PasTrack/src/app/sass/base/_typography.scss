@@ -28,6 +28,14 @@ body {
   padding-bottom: 2rem;
 }
 
+.heading-secondary-graph {
+  padding-top: 100px;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center!important;
+  display: none;
+}
+
 .typography-text {
   font-size: 1.5rem;
   text-align: justify;
@@ -38,6 +46,7 @@ body {
 .apple {
   font-weight: 700;
   text-transform: uppercase;
+  color: #FFE43C;
 }
 
 .informations-bold {

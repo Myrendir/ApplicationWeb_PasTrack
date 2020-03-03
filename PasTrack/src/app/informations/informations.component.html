@@ -4,7 +4,10 @@
         <a href="#footer"><img src="../../assets/img/darr.svg" alt="Down arrow"></a>
     </div>
 
-    <div class="informations">
+    <div class="informations" id="informations">
+
+        <a href="#popup" class="resp-popup">Voir plus</a>
+
         <div class="bg-video">
             <video class="bg-video__content" autoplay muted loop>
                 <source src="../../assets/img/video.mp4" type="video/mp4">
@@ -14,6 +17,7 @@
         </div>
 
         <div class="informations__graph wow fadeInRight" data-wow-delay="1.5s">
+            <h2 class="heading-secondary-graph text-align-right wow fadeInLeft">Statistiques</h2>
             <div class="display">
                 <div style="display: block; color: white">
                     <canvas baseChart
@@ -25,11 +29,38 @@
             </div>
         </div>
 
-        <div class="informations__text-box typography-text" id="informations">
+        <div class="informations__text-box typography-text">
             <div class="informations__text-box--section">
-                <h2 class="heading-secondary text-align-right wow fadeInLeft">Statistiques</h2>
+                <h2 class="heading-secondary text-align-right wow fadeInRight">Statistiques</h2>
                 <hr class="underline wow fadeInLeft" data-wow-delay=".2s"/>
                 <p class="wow fadeInLeft" data-delay-duration=".2s">PasTrack permet aussi de récupérer vos informations
+                    de parcours pour en faire des
+                    <span class="informations-bold">statistiques sous forme de graphique. </span>Vous pourrez facilement
+                    connaître
+                    <span class="informations-bold">le nombre de pas </span>que vous avez fait,
+                    <span class="informations-bold">les kilomètres parcourus </span>et vos
+                    <span class="informations-bold"> pertes caloriques </span>en fonctions
+                    de vos
+                    informations personnelles
+                    de santé.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="testpopup">
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img src="../../assets/img/popup.jpg" alt="Tour photo" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <a href="#informations" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-small">Statistiques</h2>
+                <p class="popup__text">
+                    PasTrack permet aussi de récupérer vos informations
                     de parcours pour en faire des
                     <span class="informations-bold">statistiques sous forme de graphique. </span>Vous pourrez facilement
                     connaître

@@ -40,6 +40,11 @@
       transform: translate(-50%, -50%);
     }
   }
+
+  .stars {
+    width: 100px;
+    margin-left: 10px;
+  }
 }
 
 
@@ -56,5 +61,13 @@
     right: 2.5vh;
     z-index: 9998;
     cursor: pointer;
+  }
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 800px) {
+  .about__text-box {
+    width: 100%;
+    float: none;
   }
 }

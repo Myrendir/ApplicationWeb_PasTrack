@@ -91,3 +91,21 @@
     z-index: 10000;
   }
 }
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 800px) {
+  .header--img {
+    display: none;
+  }
+  .header__available {
+    width: 75%;
+    top: 70%;
+    left: 50%;
+  }
+  .header__logo {
+    width: 8rem;
+  }
+  .header__text-box {
+    width: 75%;
+  }
+}

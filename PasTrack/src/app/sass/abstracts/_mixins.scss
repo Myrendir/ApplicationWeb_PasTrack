@@ -17,3 +17,7 @@
   animation: fadeIn 1s ease-out $delay;
   animation-fill-mode: backwards;
 }
+
+@mixin transition {
+  transition: all .4s ease-out;
+}
