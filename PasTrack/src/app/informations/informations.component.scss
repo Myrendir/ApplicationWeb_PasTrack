@@ -1,9 +1,10 @@
-.informations {
-  height: 110vh;
-  position: relative;
-  padding: 15rem 0;
+@import "src/styles";
 
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+.informations {
+  height: 100vh;
+  position: relative;
+
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
 
   .bg-video {
     position: absolute;
@@ -12,7 +13,7 @@
     height: 100%;
     width: 100%;
     z-index: -1;
-    opacity: .25;
+    filter: brightness(40%);
     overflow: hidden;
 
     &__content {
@@ -24,7 +25,10 @@
 
   &__graph {
     width: 50%;
-    height: 100%;
+    height: 100vh;
+    background-color: rgba(255,255,255, .8);
+
+    clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
 
     position: relative;
     float: right;
@@ -35,6 +39,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      color: #FFFFFF;
     }
   }
 
@@ -44,6 +49,7 @@
 
     float: left;
     position: relative;
+    color: #FFFFFF;
 
     &--section {
       width: 100%;
@@ -54,5 +60,22 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
+  }
+}
+
+
+.graph {
+  width: 100%;
+  height: 100vh;
+
+  position: relative;
+
+  &__arrow {
+    width: 40px;
+    position: absolute;
+    bottom: 2.5vh;
+    left: 2.5vh;
+    z-index: 9998;
+    cursor: pointer;
   }
 }

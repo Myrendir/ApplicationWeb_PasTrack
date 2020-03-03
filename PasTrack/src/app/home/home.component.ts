@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
     ngOnInit() {
         // tslint:disable-next-line:only-arrow-functions no-shadowed-variable
-        jQuery(function($) {
+        $(function($) {
             $(window).scroll(function fix_element() {
                 if ($(window).scrollTop() > 260) {
                     $('#target').css(
@@ -41,5 +41,4 @@ export class HomeComponent implements OnInit {
             }());
         });
     }
-
 }

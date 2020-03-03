@@ -9,12 +9,10 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { BodyComponent } from './body/body.component';
 import { InformationsComponent } from './informations/informations.component';
-// /animations';
 import { NgwWowModule } from 'ngx-wow';
 import { AppComponent } from './app.component';
 import { ChartsModule } from 'ng2-charts';
-import {RouterModule} from "@angular/router";
-import { FooterComponent } from './footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +22,6 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     BodyComponent,
     InformationsComponent,
-    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +30,7 @@ import { FooterComponent } from './footer/footer.component';
     ReactiveFormsModule,
     NgwWowModule,
     BrowserModule,
-    ChartsModule
+    ChartsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

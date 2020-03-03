@@ -1,33 +1,43 @@
-<section class="informations">
-    <div class="bg-video">
-        <video class="bg-video__content" autoplay muted loop>
-            <source src="../../assets/img/video.mp4" type="video/mp4">
-            <source src="../../assets/img/video.webm" type="video/webm">
-            Your browser is not supported!
-        </video>
+<section class="graph">
+
+    <div class="graph__arrow">
+        <a href="#informations"><img src="../../assets/img/darr.svg" alt="Down arrow"></a>
     </div>
 
-    <div class="informations__graph">
-        <div class="display">
-            <div style="display: block">
-                <canvas baseChart
-                        [data]="doughnutChartData"
-                        [labels]="doughnutChartLabels"
-                        [chartType]="doughnutChartType">
-                </canvas>
+    <div class="informations">
+        <div class="bg-video">
+            <video class="bg-video__content" autoplay muted loop>
+                <source src="../../assets/img/video.mp4" type="video/mp4">
+                <source src="../../assets/img/video.webm" type="video/webm">
+                Your browser is not supported!
+            </video>
+        </div>
+
+        <div class="informations__graph wow fadeInRight" data-wow-delay="1.5s">
+            <div class="display">
+                <div style="display: block; color: white">
+                    <canvas baseChart
+                            [datasets]="radarChartData"
+                            [labels]="radarChartLabels"
+                            [chartType]="radarChartType">
+                    </canvas>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="informations__text-box typography-text">
-        <div class="informations__text-box--section">
-            <h2 class="heading-secondary wow fadeInLeft">Lorem ipsum</h2>
-            <p class="wow fadeInLeft" data-delay-duration=".2s">Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. Ab accusamus, alias
-                aspernatur assumenda distinctio
-                eum eveniet fugit hic laboriosam maiores nesciunt obcaecati perspiciatis quibusdam, quod recusandae
-                repellendus saepe, tempora voluptate.
-            </p>
+        <div class="informations__text-box typography-text" id="informations">
+            <div class="informations__text-box--section">
+                <h2 class="heading-secondary text-align-right wow fadeInLeft">Statistiques</h2>
+                <hr class="underline wow fadeInLeft" data-wow-delay=".2s"/>
+                <p class="wow fadeInLeft" data-delay-duration=".2s">PasTrack permet aussi de récupérer vos informations
+                    de
+                    parcours pour en faire des statistiques sous forme de graphique. Vous pourrez facilement connaître
+                    le nombre de pas
+                    que vous avez fait, les kilomètres parcourus et vos pertes caloriques en fonctions de vos
+                    informations personnelles
+                    de santé.
+                </p>
+            </div>
         </div>
     </div>
 </section>

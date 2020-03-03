@@ -10,6 +10,16 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 3rem;
+  font-size: 3rem;
+
+  &--main {
+    font-weight: 400;
+  }
+
+  &--sub {
+    font-weight: 900;
+  }
+
 }
 
 .heading-secondary {

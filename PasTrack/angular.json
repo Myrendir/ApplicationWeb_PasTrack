@@ -34,7 +34,7 @@
               "node_modules/animate.css/animate.css"
             ],
             "scripts": [
-              "../node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
               "node_modules/wowjs/dist/wow.js"
             ]
           },
@@ -99,9 +99,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss",
+              "./node_modules/angular-bootstrap-md/assets/scss/mdb.scss",
+              "node_modules/animate.css/animate.css",
+              "node_modules/materialize-css/dist/css/materialize.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/wowjs/dist/wow.js"
+            ]
           }
         },
         "lint": {
