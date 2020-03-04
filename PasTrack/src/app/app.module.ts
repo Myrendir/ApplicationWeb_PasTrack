@@ -15,6 +15,7 @@ import { ChartsModule } from 'ng2-charts';
 import { FooterComponent } from './footer/footer.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

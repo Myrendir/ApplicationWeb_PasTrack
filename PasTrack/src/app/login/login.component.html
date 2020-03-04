@@ -1,23 +1,39 @@
-<div class="container">
-  <form id="login" class="text-center border border-light p-5" [formGroup]="form">
-    <label for="email"></label>
-    <input name="email" id="email" formControlName="email" class="form-control mb-4"
-           placeholder="Email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
-    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-      <div *ngIf="f.email.errors.required">Email is required</div>
-    </div>
-    <label for="password"></label>
-    <input name="password" id="password" formControlName="password"
-           type="password" class="form-control mb-4" placeholder="Mot de passe"
-           [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
-    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-      <div *ngIf="f.password.errors.required">Password is required</div>
-    </div>
-    <div class="g-recaptcha" data-sitekey="6LcAsLoUAAAAALuWbgtdco4bgMi5qWXTqJokXRqU"></div>
-    <div class="form-buttons">
-      <button [disabled]="loading" type="submit" name="submit" class="btn btn-primary btn-block"
-              (click)="login()"><span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Connexion
-      </button>
-    </div>
-  </form>
-</div>
+<section class="login">
+
+    <form class="login__form" [formGroup]="form">
+
+        <div class="login__form__logo">
+            <a routerLink="/acceuil" class="login__form__logo--link">
+                <img src="../../assets/img/logo-pastrack.svg" alt="Logo">
+            </a>
+        </div>
+
+        <h2 class="login__form__title">Connexion</h2>
+
+
+        <label for="email"></label>
+        <input name="email" id="email" formControlName="email" placeholder="Email" class="login__form--input"
+               [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">*Email requis.</div>
+        </div>
+
+
+        <label for="password"></label>
+        <input name="password" id="password" formControlName="password" class="login__form--input"
+               type="password" placeholder="Mot de passe"
+               [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">*Mot de passe requis.</div>
+        </div>
+
+
+        <div class="g-recaptcha" data-sitekey="6LcAsLoUAAAAALuWbgtdco4bgMi5qWXTqJokXRqU"></div>
+        <div class="form-buttons">
+            <button [disabled]="loading" type="submit" name="submit" class="login__form__button"
+                    (click)="login()"><span *ngIf="loading"></span>Connexion
+            </button>
+        </div>
+
+    </form>
+</section>

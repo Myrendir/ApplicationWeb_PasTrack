@@ -5,7 +5,29 @@
   width: 100%;
 
   position: relative;
-  
+
+  &__logg {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: inline-block;
+
+
+    &--login,
+    &--register {
+      text-decoration: none;
+      font-size: 2rem;
+      color: black;
+      padding: 1rem;
+
+      @include transition;
+
+      &:hover {
+        color: #FFE43C;
+      }
+    }
+  }
+
   &__logo-box {
     position: absolute;
     top: 8rem;
@@ -34,6 +56,8 @@
       display: inline-block;
       position: relative;
       font-size: 2rem;
+      text-decoration: none;
+      color: black;
 
       &:after {
         bottom: 0;

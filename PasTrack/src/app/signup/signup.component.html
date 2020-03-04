@@ -1,26 +1,41 @@
-<div class="container">
-  <form class="text-center" [formGroup]="register">
-    <label for="email"></label>
-    <input name="email" id="email" formControlName="email" class="form-control mb-4"
-           placeholder="Email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
-    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-      <div *ngIf="f.email.errors.required">Email is required</div>
-    </div>
-    <label for="password"></label>
-    <input name="password" id="password" formControlName="password"
-           type="password" class="form-control mb-4" placeholder="Mot de passe"
-           [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
-    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-      <div *ngIf="f.password.errors.required">Password is required</div>
-    </div>
-    <label for="role"></label>
-    <input type="text" name="role" id="role" formControlName="role" class="form-control mb-4" placeholder="Role"
-           [ngClass]="{ 'is-invalid': submitted && f.role.errors}">
-    <div *ngIf="submitted && f.role.errors" class="invalid-feedback">
-      <div *ngIf="f.role.errors.required">Role is required.</div>
-    </div>
-    <button [disabled]="loading" type="submit" name="submit" class="btn btn-primary btn-block"
-            (click)="signup()"><span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Inscription
-    </button>
-  </form>
-</div>
+<section class="register">
+
+    <form class="register__form" [formGroup]="register">
+
+        <div class="register__form__logo">
+            <a routerLink="/acceuil" class="register__form__logo--link">
+                <img src="../../assets/img/logo-pastrack.svg" alt="Logo">
+            </a>
+        </div>
+
+        <h2 class="register__form__title">Inscription</h2>
+
+        <label for="email"></label>
+        <input name="email" id="email" formControlName="email" placeholder="Email" class="register__form--input"
+               [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">*Email requis.</div>
+        </div>
+
+        <label for="password"></label>
+        <input name="password" id="password" formControlName="password" class="register__form--input"
+               type="password" placeholder="Mot de passe"
+               [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">*Mot de passe requis.</div>
+        </div>
+
+        <label for="role"></label>
+        <input type="text" name="role" id="role" formControlName="role" class="register__form--input" placeholder="Role"
+               [ngClass]="{ 'is-invalid': submitted && f.role.errors}">
+        <div *ngIf="submitted && f.role.errors" class="invalid-feedback">
+            <div *ngIf="f.role.errors.required">*Role requis.</div>
+        </div>
+
+        <div class="form-buttons">
+            <button [disabled]="loading" type="submit" name="submit" class="register__form__button"
+                    (click)="signup()"><span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Inscription
+            </button>
+        </div>
+    </form>
+</section>

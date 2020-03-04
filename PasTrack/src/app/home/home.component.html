@@ -1,6 +1,9 @@
 <header class="header wow fadeIn">
 
-<!--    <img src="../../assets/img/step.gif" alt="step" width="50px" id="step" class="step&#45;&#45;gif">-->
+    <div class="header__logg">
+        <a routerLink="/connexion" class="header__logg--login">Se connecter</a>
+        <a routerLink="/inscription" class="header__logg--register">S'inscrire</a>
+    </div>
 
     <div class="header__logo-box">
         <img src="../../assets/img/logo-pastrack.svg" alt="Logo" class="header__logo">
@@ -12,7 +15,7 @@
             <span class="heading-primary--sub">PasTrack</span>
         </h1>
 
-        <a href="#body" class="btn btn--white wow fadeIn" data-wow-delay=".2s">Découvrez notre application &darr;</a>
+        <a href="#body" class="btn wow fadeIn" data-wow-delay=".2s">Découvrez notre application &darr;</a>
     </div>
 
     <div class="header__available">
@@ -32,3 +35,10 @@
         <a href="#"><img src="../../assets/img/tarr.svg" alt="Top arrow"></a>
     </div>
 </header>
+
+<app-body></app-body>
+
+<app-informations></app-informations>
+
+<app-footer></app-footer>
+
