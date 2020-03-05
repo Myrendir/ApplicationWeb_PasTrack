@@ -13,6 +13,7 @@ import { NgwWowModule } from 'ngx-wow';
 import { AppComponent } from './app.component';
 import { ChartsModule } from 'ng2-charts';
 import { FooterComponent } from './footer/footer.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -25,6 +26,7 @@ import { FooterComponent } from './footer/footer.component';
     BodyComponent,
     InformationsComponent,
     FooterComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
