@@ -37,5 +37,11 @@
                     (click)="signup()"><span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Inscription
             </button>
         </div>
+
+        <div class="register__form__infos">
+            <p>Déjà inscrit ?
+                <a routerLink="/inscription" class="register__form__logo--link"> Connectez-vous!</a>
+            </p>
+        </div>
     </form>
 </section>

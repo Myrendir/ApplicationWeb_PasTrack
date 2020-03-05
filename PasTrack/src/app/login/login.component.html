@@ -34,6 +34,10 @@
                     (click)="login()"><span *ngIf="loading"></span>Connexion
             </button>
         </div>
-
+        <div class="login__form__infos">
+            <p>Pas encore inscrit ?
+                <a routerLink="/inscription" class="login__form__logo--link"> Inscrivez-vous!</a>
+            </p>
+        </div>
     </form>
 </section>

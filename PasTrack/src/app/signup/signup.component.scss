@@ -6,14 +6,19 @@
 
   position: relative;
 
+  background-color: whitesmoke;
+
   @include transition;
 
   &__form {
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 25%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+    padding: 20px;
+    background-color: white;
 
     @include transition;
 
@@ -33,6 +38,7 @@
       font-size: 3rem;
       font-weight: 400;
       padding-bottom: 2rem;
+      margin-top: 2rem;
     }
 
     &--input {
@@ -41,7 +47,7 @@
       border-radius: 3px;
       padding: 10px 15px;
       margin: 0 auto;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       display: block;
       text-align: center;
       font-size: 18px;
@@ -56,7 +62,7 @@
     }
 
     &__button {
-      border: 1px solid;
+      border: none;
       width: 90%;
       border-radius: 3px;
       padding: 10px 15px;
@@ -66,10 +72,20 @@
       text-align: center;
       font-size: 18px;
       font-weight: 300;
+      background-color: #FFE43C;
+
+      @include transition;
 
       &:hover {
         cursor: pointer;
+        background-color: #E8BC2C;
+        color: white;
       }
+    }
+    &__infos {
+      text-align: center;
+      font-size: 1.2rem;
+      padding-top: 1rem;
     }
   }
 }
