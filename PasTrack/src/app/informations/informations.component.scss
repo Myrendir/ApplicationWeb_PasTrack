@@ -40,7 +40,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: #FFFFFF;
+      color: $color-white;
     }
   }
 
@@ -50,7 +50,7 @@
 
     float: left;
     position: relative;
-    color: #FFFFFF;
+    color: $color-white;
 
     &--section {
       width: 100%;
@@ -71,14 +71,14 @@
     font-size: 1rem;
     text-decoration: none;
     text-transform: uppercase;
-    color: white;
+    color: $color-white;
     font-weight: 700;
     @include transition;
 
     display: none;
 
     &:hover {
-      color: #FFE43C;
+      color: $color-primary;
     }
   }
 }
@@ -89,7 +89,7 @@
   height: 100vh;
 
   position: relative;
-  background-color: #111111;
+  background-color: $color-grey-dark-3;
 
   &__arrow {
     width: 40px;
@@ -106,7 +106,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(#000, .8);
+  background-color: rgba($color-black, .8);
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
@@ -115,14 +115,14 @@
   @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background-color: rgba(#000, .3);
+    background-color: rgba($color-black, .3);
   }
 
   &__content {
     @include absCenter;
 
     width: 75%;
-    background-color: #FFFFFF;
+    background-color: $color-white;
     box-shadow: 0 2rem 4rem rgba(#000, .2);
     border-radius: 3px;
     display: table;
@@ -173,7 +173,7 @@
   &__close {
     &:link,
     &:visited {
-      color: #333333;
+      color: $color-grey-dark-3;
       position: absolute;
       top: 2.5rem;
       right: 2.5rem;
@@ -185,7 +185,7 @@
     }
 
     &:hover {
-      color: #FFE43C;
+      color: $color-primary;
     }
   }
 }
@@ -203,7 +203,7 @@
   }
 
   .resp-popup {
-    display: inline-block!important;
+    display: inline-block !important;
   }
 
   .heading-secondary-graph {

@@ -5,11 +5,11 @@
   height: 100vh;
 
   position: relative;
-  background-color: #FFE43C;
+  background-color: $color-primary;
 
   .card {
     width: 80%;
-    background-color: white;
+    background-color: $color-white;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
     padding: 40px;
     border-radius: 10px;
@@ -19,7 +19,7 @@
     @include absCenter;
 
     &__disconnect {
-      color: #ffffff;
+      color: $color-white;
       display: inline-block;
       padding: 6px 12px;
       margin-bottom: 0;
@@ -37,7 +37,7 @@
       -ms-user-select: none;
       -o-user-select: none;
       user-select: none;
-      background-color: #17a2b8;
+      background-color: $color-btn-disconnect;
 
       @include transition;
 
@@ -45,11 +45,11 @@
         text-decoration: none;
         font-size: 1rem;
         text-transform: uppercase;
-        color: #FFFFFF;
+        color: $color-white;
       }
 
       &:hover {
-        background-color: #0E82CF;
+        background-color: $color-btn-disconnect-hover;
       }
     }
 
@@ -67,12 +67,12 @@
         height: 300px;
         overflow-x: auto;
         margin-top: 0px;
-        border: 1px solid rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba($color-white, 0.3);
       }
     }
 
     table {
-      border: 1px solid lightgray;
+      border: 1px solid $color-grey-light-2;
       border-collapse: collapse;
     }
 
@@ -82,7 +82,7 @@
 
     thead {
       display: block;
-      background-color: whitesmoke;
+      background-color: $color-grey-light-1;
     }
 
     tbody {
@@ -95,7 +95,7 @@
       padding: 15px 52px 15px 52px;
       font-weight: 500;
       font-size: 12px;
-      color: #000000;
+      color: $color-black;
       text-transform: uppercase;
       position: sticky;
       top: 0;
@@ -108,12 +108,12 @@
       vertical-align: middle;
       font-weight: 300;
       font-size: 12px;
-      color: #000000;
+      color: $color-black;
       border-top: 1px solid lightgray;
       border-collapse: collapse;
 
       button {
-        color: #ffffff;
+        color: $color-white;
         display: inline-block;
         padding: 6px 12px;
         margin-bottom: 0;
@@ -130,21 +130,21 @@
         -ms-user-select: none;
         -o-user-select: none;
         user-select: none;
-        background-color: #d2322d;
+        background-color: $color-btn-delete;
         @include transition;
         border: transparent solid 3px;
 
         &:hover {
-          background-color: #E84825;
+          background-color: $color-btn-delete-hover;
         }
       }
 
       .edit {
-        background-color: #52adf2;
+        background-color: $color-btn-edit;
         @include transition;
 
         &:hover {
-          background-color: #406FDB;
+          background-color: $color-btn-edit-hover;
         }
       }
     }

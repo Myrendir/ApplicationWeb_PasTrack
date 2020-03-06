@@ -32,7 +32,7 @@ body {
   padding-top: 100px;
   font-size: 3rem;
   text-transform: uppercase;
-  text-align: center!important;
+  text-align: center !important;
   display: none;
 }
 
@@ -46,17 +46,17 @@ body {
 .apple {
   font-weight: 700;
   text-transform: uppercase;
-  color: #FFE43C;
+  color: $color-primary;
 }
 
 .informations-bold {
   font-weight: 700;
   text-transform: uppercase;
-  color: #FFE43C;
+  color: $color-primary;
 }
 
 .invalid-feedback {
-  color: orangered;
+  color: $color-btn-delete;
   font-size: 1rem;
   padding-left: 2rem;
 }

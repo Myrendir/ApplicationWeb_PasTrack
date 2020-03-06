@@ -1,5 +1,7 @@
+@import "src/styles";
+
 .footer {
-  background-color: #111111;
+  background-color: $color-grey-dark-3;
   padding: 18rem 0;
   font-size: 1.4rem;
 
@@ -14,7 +16,7 @@
   }
 
   &__navigation {
-    border-top: 1px solid #777777;
+    border-top: 1px solid $color-grey-dark;
     padding: 2rem;
     display: inline-block;
   }
@@ -34,7 +36,7 @@
   &__link {
     &:link,
     &:visited {
-      color: #f7f7f7;
+      color: $color-grey-light-1;
       text-decoration: none;
       text-transform: uppercase;
       display: inline-block;
@@ -43,16 +45,16 @@
 
     &:hover,
     &:active {
-      color: #FFE43C;
+      color: $color-primary;
     }
   }
 
   &__copyright {
-    border-top: 1px solid #777777;
+    border-top: 1px solid $color-grey-dark;
     padding: 2rem;
     width: 80%;
     float: right;
-    color: #777777;
+    color: $color-grey-dark;
   }
 }
 

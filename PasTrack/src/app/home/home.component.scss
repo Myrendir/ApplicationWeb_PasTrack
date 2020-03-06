@@ -23,7 +23,7 @@
       @include transition;
 
       &:hover {
-        color: #FFE43C;
+        color: $color-primary;
       }
     }
   }
