@@ -30,8 +30,11 @@
 
         <div class="g-recaptcha" data-sitekey="6LcAsLoUAAAAALuWbgtdco4bgMi5qWXTqJokXRqU"></div>
         <div class="form-buttons">
+<!--            <button [disabled]="loading" type="submit" name="submit" class="login__form__button"-->
+<!--                    (click)="router.navigate(['/dashboard'])"><span *ngIf="loading"></span>Connexion            Login Dashboard-->
+<!--            </button>-->
             <button [disabled]="loading" type="submit" name="submit" class="login__form__button"
-                    (click)="router.navigate(['/dashboard'])"><span *ngIf="loading"></span>Connexion
+                    (click)="router.navigate(['/interface'])"><span *ngIf="loading"></span>Connexion
             </button>
         </div>
         <div class="login__form__infos">

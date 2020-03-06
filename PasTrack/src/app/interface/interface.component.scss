@@ -1,0 +1,54 @@
+@import "src/styles";
+
+.interface {
+  width: 100%;
+  height: 100vh;
+  background-color: #FFE43C;
+
+  .navbar {
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    background-color: white;
+
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+
+    &__logo {
+      width: 10rem;
+      margin: 0 auto;
+      margin-top: 2rem;
+    }
+
+    &__hr {
+      border: 1px solid whitesmoke;
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+
+    &__list {
+      width: 100%;
+      padding: 20px;
+      margin-top: 50px;
+      list-style: none;
+
+      li {
+        padding: 10px 0 10px 0;
+        margin: 10px 0 10px 0;
+        background-color: #55c57a;
+        border-radius: 5px;
+      }
+
+      img {
+        width: 4rem;
+        margin-left: 10px;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
