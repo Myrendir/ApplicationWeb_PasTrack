@@ -15,6 +15,7 @@ import {ChartsModule} from 'ng2-charts';
 import {FooterComponent} from './footer/footer.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {InterfaceComponent} from './interface/interface.component';
+import {ProfilComponent} from './profil/profil.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import {InterfaceComponent} from './interface/interface.component';
         FooterComponent,
         DashboardComponent,
         InterfaceComponent,
+        ProfilComponent,
     ],
     imports: [
         BrowserModule,

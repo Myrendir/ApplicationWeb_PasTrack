@@ -6,6 +6,7 @@ import {SignupComponent} from './signup/signup.component';
 import {HomeComponent} from './home/home.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {InterfaceComponent} from './interface/interface.component';
+import {ProfilComponent} from './profil/profil.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
     {path: 'inscription', component: SignupComponent},
     {path: 'dashboard', component: DashboardComponent},
     {path: 'interface', component: InterfaceComponent},
+    {path: 'profil', component: ProfilComponent},
     {path: '**', redirectTo: ''}
 ];
 
