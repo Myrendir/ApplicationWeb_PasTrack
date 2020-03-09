@@ -1,48 +1,86 @@
 <section class="register">
 
-    <form class="register__form" [formGroup]="register">
+    <form class="form" [formGroup]="register">
 
-        <div class="register__form__logo">
-            <a routerLink="/acceuil" class="register__form__logo--link">
+        <div class="form__logo">
+            <a routerLink="/acceuil" class="form__logo--link">
                 <img src="../../assets/img/logo-pastrack.svg" alt="Logo">
             </a>
         </div>
 
-        <h2 class="register__form__title">Inscription</h2>
+        <h2 class="form__title">Inscription</h2>
 
-        <label for="email"></label>
-        <input name="email" id="email" formControlName="email" placeholder="Email" class="register__form--input"
-               [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
-        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-            <div *ngIf="f.email.errors.required">*Email requis.</div>
+        <div class="float-box">
+            <label for="email"></label>
+            <input type="email" name="email" id="email" formControlName="email" placeholder="Email"
+                   class="form--input"
+                   [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">*Email requis.</div>
+            </div>
+
+            <label for="password"></label>
+            <input name="password" id="password" formControlName="password" class="form--input"
+                   type="password" placeholder="Mot de passe"
+                   [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required">*Mot de passe requis.</div>
+            </div>
+
+            <label for="name"></label>
+            <input type="text" name="name" id="name" formControlName="name" class="form--input"
+                   placeholder="Prénom"
+                   [ngClass]="{ 'is-invalid': submitted && f.name.errors}">
+            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                <div *ngIf="f.name.errors.required">*Prénom requis.</div>
+            </div>
+
+            <label for="last-name"></label>
+            <input type="text" name="last-name" id="last-name" formControlName="last-name" class="form--input"
+                   placeholder="Nom"
+                   [ngClass]="{ 'is-invalid': submitted && f.lastname.errors}">
+            <div *ngIf="submitted && f.lastname.errors" class="invalid-feedback">
+                <div *ngIf="f.lastname.errors.required">*Nom requis.</div>
+            </div>
         </div>
 
-        <label for="password"></label>
-        <input name="password" id="password" formControlName="password" class="register__form--input"
-               type="password" placeholder="Mot de passe"
-               [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
-        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-            <div *ngIf="f.password.errors.required">*Mot de passe requis.</div>
-        </div>
+        <div class="float-box-2">
+            <label for="birthday"></label>
+            <input type="date" name="birthday" id="birthday" formControlName="birthday" class="form--input"
+                   placeholder="84kg"
+                   [ngClass]="{ 'is-invalid': submitted && f.birthday.errors}">
+            <div *ngIf="submitted && f.birthday.errors" class="invalid-feedback">
+                <div *ngIf="f.birthday.errors.required">*Date de naissance requis.</div>
+            </div>
 
-        <label for="role"></label>
-        <input type="text" name="role" id="role" formControlName="role" class="register__form--input" placeholder="Role"
-               [ngClass]="{ 'is-invalid': submitted && f.role.errors}">
-        <div *ngIf="submitted && f.role.errors" class="invalid-feedback">
-            <div *ngIf="f.role.errors.required">*Role requis.</div>
-        </div>
+            <label for="poids"></label>
+            <input type="number" name="poids" id="poids" formControlName="poids" class="form--input"
+                   placeholder="84kg"
+                   [ngClass]="{ 'is-invalid': submitted && f.poids.errors}">
+            <div *ngIf="submitted && f.poids.errors" class="invalid-feedback">
+                <div *ngIf="f.poids.errors.required">*Poids requis.</div>
+            </div>
 
-        <div class="form-buttons">
-            <button [disabled]="loading" type="submit" name="submit" class="register__form__button"
-                    (click)="router.navigate(['/home'])"><span *ngIf="loading"
-                                                               class="spinner-border spinner-border-sm mr-1"></span>Inscription
-            </button>
-        </div>
+            <label for="taille"></label>
+            <input type="number" name="taille" id="taille" formControlName="taille" class="form--input"
+                   placeholder="1.87m"
+                   [ngClass]="{ 'is-invalid': submitted && f.taille.errors}">
+            <div *ngIf="submitted && f.taille.errors" class="invalid-feedback">
+                <div *ngIf="f.taille.errors.required">*Taille requis.</div>
+            </div>
 
-        <div class="register__form__infos">
-            <p>Déjà inscrit ?
-                <a routerLink="/inscription" class="register__form__logo--link"> Connectez -vous!</a>
-            </p>
+            <div class="form-buttons">
+                <button [disabled]="loading" type="submit" name="submit" class="form__button"
+                        (click)="router.navigate(['/home'])">
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Inscription
+                </button>
+            </div>
+
+            <div class="form__infos">
+                <p>Déjà inscrit ?
+                    <a routerLink="/connexion" class="form__logo--link"> Connectez -vous!</a>
+                </p>
+            </div>
         </div>
     </form>
 </section>

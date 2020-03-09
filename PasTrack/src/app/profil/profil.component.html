@@ -34,4 +34,88 @@
         </div>
     </div>
 
+    <div class="wrap">
+
+        <form class="form" [formGroup]="register">
+
+            <div class="form__logo">
+                <a routerLink="/acceuil" class="form__logo--link">
+                    <img src="../../assets/img/profil-picture.png" alt="Logo">
+                </a>
+            </div>
+
+            <h2 class="form__title">John Doe</h2>
+
+            <div class="float-box">
+                <label for="email"></label>
+                <input type="email" name="email" id="email" formControlName="email" placeholder="user@gmail.com" disabled
+                       class="form--input"
+                       [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">*Email requis.</div>
+                </div>
+
+                <label for="password"></label>
+                <input name="password" id="password" formControlName="password" class="form--input"
+                       type="password" placeholder="*********" disabled
+                       [ngClass]="{ 'is-invalid': submitted && f.password.errors }">
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">*Mot de passe requis.</div>
+                </div>
+
+                <label for="name"></label>
+                <input type="text" name="name" id="name" formControlName="name" class="form--input"
+                       placeholder="John" disabled
+                       [ngClass]="{ 'is-invalid': submitted && f.name.errors}">
+                <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                    <div *ngIf="f.name.errors.required">*Prénom requis.</div>
+                </div>
+
+                <label for="last-name"></label>
+                <input type="text" name="last-name" id="last-name" formControlName="last-name"
+                       class="form--input"
+                       placeholder="Doe" disabled
+                       [ngClass]="{ 'is-invalid': submitted && f.lastname.errors}">
+                <div *ngIf="submitted && f.lastname.errors" class="invalid-feedback">
+                    <div *ngIf="f.lastname.errors.required">*Nom requis.</div>
+                </div>
+            </div>
+
+            <div class="float-box-2">
+                <label for="birthday"></label>
+                <input type="date" name="birthday" id="birthday" formControlName="birthday"
+                       class="form--input" disabled
+                       [ngClass]="{ 'is-invalid': submitted && f.birthday.errors}">
+                <div *ngIf="submitted && f.birthday.errors" class="invalid-feedback">
+                    <div *ngIf="f.birthday.errors.required">*Date de naissance requis.</div>
+                </div>
+
+                <label for="poids"></label>
+                <input type="number" name="poids" id="poids" formControlName="poids"
+                       class="form--input"
+                       placeholder="84kg" disabled
+                       [ngClass]="{ 'is-invalid': submitted && f.poids.errors}">
+                <div *ngIf="submitted && f.poids.errors" class="invalid-feedback">
+                    <div *ngIf="f.poids.errors.required">*Poids requis.</div>
+                </div>
+
+                <label for="taille"></label>
+                <input type="number" name="taille" id="taille" formControlName="taille"
+                       class="form--input"
+                       placeholder="1.87m" disabled
+                       [ngClass]="{ 'is-invalid': submitted && f.taille.errors}">
+                <div *ngIf="submitted && f.taille.errors" class="invalid-feedback">
+                    <div *ngIf="f.taille.errors.required">*Taille requis.</div>
+                </div>
+
+                <div class="form-buttons">
+                    <button [disabled]="loading" type="submit" name="submit" class="form__button"
+                            (click)="router.navigate(['/profil'])">
+                        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Modifier
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
 </section>

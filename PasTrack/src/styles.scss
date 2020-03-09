@@ -4,7 +4,7 @@
 @import "~animate.css/animate.css";
 
 .loading {
-  background: #FFE43C;
+  background: $color-primary;
   height: 100vh;
   width: 100%;
 }
@@ -19,7 +19,7 @@
 
 .dots {
   animation: bounce 1.5s infinite linear;
-  background: #FFF;
+  background: $color-white;
   border-radius: 50%;
   display: inline-block;
   height: 20px;

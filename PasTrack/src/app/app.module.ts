@@ -16,6 +16,7 @@ import {FooterComponent} from './footer/footer.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {InterfaceComponent} from './interface/interface.component';
 import {ProfilComponent} from './profil/profil.component';
+import {SettingsComponent} from './settings/settings.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import {ProfilComponent} from './profil/profil.component';
         DashboardComponent,
         InterfaceComponent,
         ProfilComponent,
+        SettingsComponent,
     ],
     imports: [
         BrowserModule,
