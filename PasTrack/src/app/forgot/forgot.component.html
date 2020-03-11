@@ -1,1 +1,31 @@
-<p>forgot works!</p>
+<section class="forgot">
+
+    <form class="form" [formGroup]="form">
+
+        <div class="form__logo">
+            <a routerLink="/acceuil" class="form__logo--link">
+                <img src="../../assets/img/logo-pastrack.svg" alt="Logo">
+            </a>
+        </div>
+
+        <h2 class="form__title">Mot de passe oublié</h2>
+
+
+        <label for="email"></label>
+        <input name="email" id="email" formControlName="email" placeholder="Email" class="form--input"
+               [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">*Email requis.</div>
+        </div>
+
+        <div class="g-recaptcha" data-sitekey="6LcAsLoUAAAAALuWbgtdco4bgMi5qWXTqJokXRqU"></div>
+        <div class="form-buttons">
+            <!--            <button [disabled]="loading" type="submit" name="submit" class="form__button"-->
+            <!--                    (click)="router.navigate(['/dashboard'])"><span *ngIf="loading"></span>Connexion            Login Dashboard-->
+            <!--            </button>-->
+            <button [disabled]="loading" type="submit" name="submit" class="form__button"
+                    (click)="router.navigate(['/interface'])"><span *ngIf="loading"></span>Connexion
+            </button>
+        </div>
+    </form>
+</section>
