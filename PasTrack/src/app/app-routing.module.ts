@@ -7,6 +7,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {InterfaceComponent} from './interface/interface.component';
 import {ProfilComponent} from './profil/profil.component';
 import {SettingsComponent} from './settings/settings.component';
+import {ForgotComponent} from './forgot/forgot.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
     {path: 'accueil', component: HomeComponent},
     {path: 'connexion', component: LoginComponent},
     {path: 'inscription', component: SignupComponent},
+    {path: 'forgot', component: ForgotComponent},
     {path: 'dashboard', component: DashboardComponent},
     {path: 'interface', component: InterfaceComponent},
     {path: 'profil', component: ProfilComponent},

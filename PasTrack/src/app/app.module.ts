@@ -17,6 +17,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {InterfaceComponent} from './interface/interface.component';
 import {ProfilComponent} from './profil/profil.component';
 import {SettingsComponent} from './settings/settings.component';
+import { ForgotComponent } from './forgot/forgot.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import {SettingsComponent} from './settings/settings.component';
         InterfaceComponent,
         ProfilComponent,
         SettingsComponent,
+        ForgotComponent,
     ],
     imports: [
         BrowserModule,
