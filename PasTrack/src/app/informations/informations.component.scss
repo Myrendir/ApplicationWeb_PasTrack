@@ -210,3 +210,9 @@
     display: block;
   }
 }
+
+@media screen and (max-width: 905px) {
+  .popup__left {
+    display: none;
+  }
+}
